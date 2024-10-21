@@ -81,6 +81,13 @@ if get_option('sdl2').enabled()
         dependencies += sdl2_dep
     endif
 endif
+if get_option('sdl3').enabled()
+    sdl3_dep = dependency('sdl3', required: get_option('sdl3'))
+    if sdl3_dep.found()
+        sources += 'backends/imgui_impl_sdl3.cpp'
+        dependencies += sdl3_dep
+    endif
+endif
 if get_option('osx').enabled() or (get_option('osx').auto() and target_machine.system() == 'darwin')
     sources += 'backends/imgui_impl_osx.mm'
 endif

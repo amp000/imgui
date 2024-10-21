@@ -10,6 +10,7 @@ option('vulkan', type : 'feature', value : 'disabled', yield: true, description:
 # platform backends
 option('glfw', type : 'feature', value : 'disabled', yield: true, description: 'GLFW platform')
 option('sdl2', type : 'feature', value : 'disabled', yield: true, description: 'SDL2 platform')
+option('sdl3', type : 'feature', value : 'disabled', yield: true, description: 'SDL3 platform')
 option('osx', type : 'feature', value : 'disabled', yield: true, description: 'OSX platform')
 option('win', type : 'feature', value : 'disabled', yield: true, description: 'Windows platform')
 
