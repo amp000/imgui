@@ -75,18 +75,18 @@ if get_option('glfw').enabled()
 endif
 
 if get_option('sdl2').enabled()
-    sdl2_dep = dependency('sdl2', required: get_option('sdl2'))
-    if sdl2_dep.found()
         sources += 'backends/imgui_impl_sdl.cpp'
-        dependencies += sdl2_dep
-    endif
+    # sdl2_dep = dependency('sdl2', required: get_option('sdl2'))
+    # if sdl2_dep.found()
+    #     dependencies += sdl2_dep
+    # endif
 endif
 if get_option('sdl3').enabled()
-    sdl3_dep = dependency('sdl3', required: get_option('sdl3'))
-    if sdl3_dep.found()
         sources += 'backends/imgui_impl_sdl3.cpp'
-        dependencies += sdl3_dep
-    endif
+    # sdl3_dep = dependency('sdl3', required: get_option('sdl3'))
+    # if sdl3_dep.found()
+    #     dependencies += sdl3_dep
+    # endif
 endif
 if get_option('osx').enabled() or (get_option('osx').auto() and target_machine.system() == 'darwin')
     sources += 'backends/imgui_impl_osx.mm'
@@ -98,11 +98,11 @@ endif
 # frameworks
 
 if get_option('allegro5').enabled()
-    allegro5_dep = dependency('allegro5', required: get_option('allegro5'))
-    if allegro5_dep.found()
         sources += 'backends/imgui_impl_allegro5.cpp'
-        dependencies += allegro5_dep
-    endif
+    # allegro5_dep = dependency('allegro5', required: get_option('allegro5'))
+    # if allegro5_dep.found()
+    #     dependencies += allegro5_dep
+    # endif
 endif
 
 if get_option('marmalade').enabled()
